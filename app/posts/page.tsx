@@ -7,6 +7,7 @@ import LoadingState from "@/components/LoadingState";
 import PostsList from "@/components/PostList";
 import SearchBar from "@/components/SearchBar";
 import { usePosts } from "@/hooks/usePosts";
+import Link from "next/link";
 
 export default function PostsPage() {
   const {
@@ -33,7 +34,12 @@ export default function PostsPage() {
   const showEmptyState = posts.length === 0 && !isLoading;
 
   return (
-    <div className="max-w-7xl mx-auto p-24">
+    <div className="max-w-7xl mx-auto py-24 md:p-24">
+      <div className="flex items-center justify-between mb-4">
+        <Link href={'/todos'} className="cursor-pointer">
+          &#10216; Prev
+        </Link>
+      </div>
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Blog Posts</h1>
         <p className="text-gray-600">
