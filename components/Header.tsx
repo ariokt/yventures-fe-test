@@ -7,7 +7,7 @@ export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <>
-      <header className="h-14 fixed flex items-center px-4 bg-gray-900 shadow w-full">
+      <header className="h-14 fixed flex items-center px-4 bg-gray-900 shadow w-full z-10">
         <button
           onClick={() => setSidebarOpen(true)}
           className="text-xl text-white"

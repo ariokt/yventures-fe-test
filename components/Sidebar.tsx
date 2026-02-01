@@ -23,7 +23,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const pathname = usePathname();
 
   return (
-    <aside className={`fixed h-screen w-64 bg-gray-900 text-white flex flex-col transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+    <aside className={`z-20 fixed h-screen w-64 bg-gray-900 text-white flex flex-col transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <div className="h-14 flex items-center justify-between px-4 border-b border-gray-800">
         <span className="font-bold">MyApp</span>
         <button
